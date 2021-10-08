@@ -1,7 +1,31 @@
+#gameContainer{
+    grid-template-columns: repeat(16, 1fr);
+    border-style: ridge;
+    margin-top: 15px;
+    width: 600px;
+    height: 600px;
+    margin-left: 425px;
+    display: grid;
+}
+
+.innerSquares{
+    transition: background-color 0s;
+    transition-delay: 500s;
+    background-color; rgb(233,233,233);
+}
+
+.innerSquares:hover{
+    background-color: black;
+    transition:background-color;
+    transition-delay: 0s;
+}
+
 .base{
     background-color: rgb(233, 233, 233)
 }
+
 .header{
+    position: sticky;
     border-style: ridge;
     border-radius: 10px;
     padding-bottom: 6vh;
@@ -9,6 +33,7 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 50px;
     text-align: center;
+    z-index: 1;
 }
 .menu{
     border-style: ridge;
@@ -19,13 +44,8 @@
     float: left;
 }
 
-#gameContainer{
-    border-style: ridge;
-    margin-top: 15px;
-    width: 600px;
-    height: 600px;
-    margin-left: 425px;
-}
+
+
 
 .slideContainer{
     width: 100%;
@@ -34,10 +54,13 @@
 .slider{
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
+    margin-left: 6px;
+    width: 95%;
     height: 25px;
     background: #d3d3d3;
-    outline: none;
+    border-radius: 8px;
+    border-color: rgba(0, 0, 0, 0.63);
+    border-style:solid;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
@@ -46,4 +69,8 @@
 .slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
   }
+
+#regenerateButton{
+    margin-left: 7px;
+}
 
